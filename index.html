@@ -11,148 +11,144 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --black:#0A0A0A;--near-black:#111;--dark:#1A1A1A;
-  --border:rgba(255,255,255,0.08);--border-light:rgba(255,255,255,0.15);
-  --white:#FFF;--muted:rgba(255,255,255,0.45);--muted2:rgba(255,255,255,0.22);
-  --green:#3DDC84;--green-dim:rgba(61,220,132,0.1);
-  --amber:#F5A623;--amber-dim:rgba(245,166,35,0.1);
+  --border:rgba(255,255,255,0.07);--border-light:rgba(255,255,255,0.13);
+  --white:#FFF;--muted:rgba(255,255,255,0.42);--muted2:rgba(255,255,255,0.2);
+  --green:#3DDC84;--green-dim:rgba(61,220,132,0.08);
+  --amber:#F5A623;--amber-dim:rgba(245,166,35,0.08);
+  --coffee:#C8860A;--coffee-dim:rgba(200,134,10,0.08);
 }
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
 body.rtl{font-family:'Tajawal',sans-serif;direction:rtl}
 body.rtl .nav-links{flex-direction:row-reverse}
-body.rtl .product-content,.why-text{text-align:right}
-body.rtl .why-item{flex-direction:row-reverse}
-body.rtl .product-badge,.btn-wrap{justify-content:flex-end}
+body.rtl .pc{text-align:right}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 52px;border-bottom:1px solid var(--border);background:rgba(10,10,10,0.9);backdrop-filter:blur(20px)}
-.nav-logo{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;letter-spacing:0.07em;color:var(--white);text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;border-bottom:1px solid var(--border);background:rgba(10,10,10,0.92);backdrop-filter:blur(24px)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;letter-spacing:0.08em;color:var(--white);text-decoration:none}
 .nav-logo span{color:var(--amber)}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:14px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:0.02em;transition:color 0.2s}
 .nav-links a:hover{color:var(--white)}
-.lang-btn{background:transparent;border:1px solid var(--border-light);border-radius:100px;padding:7px 16px;font-size:13px;color:var(--muted);cursor:pointer;font-family:inherit;transition:all 0.2s}
-.lang-btn:hover{color:var(--white);border-color:rgba(255,255,255,0.3)}
+.lang-btn{background:transparent;border:1px solid var(--border-light);border-radius:100px;padding:6px 16px;font-size:12px;color:var(--muted);cursor:pointer;font-family:inherit;transition:all 0.2s;letter-spacing:0.03em}
+.lang-btn:hover{color:var(--white);border-color:rgba(255,255,255,0.25)}
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:140px 48px 80px;text-align:center;position:relative;overflow:hidden}
-.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.08) 0%,transparent 65%);top:40%;left:50%;transform:translate(-50%,-55%);pointer-events:none}
-.hero-glow2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(61,220,132,0.06) 0%,transparent 65%);bottom:-80px;right:-80px;pointer-events:none}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--border-light);border-radius:100px;padding:7px 18px;font-size:11px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:36px;animation:fadeUp 0.6s ease both}
-.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);box-shadow:0 0 7px var(--amber);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
-.hero-title{font-family:'Syne',sans-serif;font-size:clamp(50px,8vw,94px);font-weight:800;line-height:1.0;letter-spacing:-0.03em;margin-bottom:26px;animation:fadeUp 0.7s ease 0.1s both}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,0.06) 0%,transparent 65%);top:35%;left:50%;transform:translate(-50%,-55%);pointer-events:none}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(61,220,132,0.04) 0%,transparent 65%);bottom:-60px;right:-60px;pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border-light);border-radius:100px;padding:6px 16px;font-size:11px;color:var(--muted);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:40px;animation:fadeUp 0.6s ease both}
+.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--amber);animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(48px,8vw,90px);font-weight:800;line-height:1.0;letter-spacing:-0.03em;margin-bottom:24px;animation:fadeUp 0.7s ease 0.1s both}
 .hero-title .acc{color:var(--amber)}
-.hero-sub{font-size:17px;color:var(--muted);line-height:1.72;max-width:500px;margin:0 auto 48px;font-weight:300;animation:fadeUp 0.7s ease 0.2s both}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:0.12em;color:var(--muted2);text-transform:uppercase;animation:bob 2.5s ease-in-out infinite}
-@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.hero-sub{font-size:16px;color:var(--muted);line-height:1.8;max-width:460px;margin:0 auto 52px;font-weight:300;animation:fadeUp 0.7s ease 0.2s both}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;animation:fadeUp 0.7s ease 0.3s both}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:0.14em;color:var(--muted2);text-transform:uppercase;animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:100px;font-size:13px;font-weight:500;font-family:inherit;text-decoration:none;border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;letter-spacing:0.01em}
+.hero-btn-primary{background:var(--white);color:var(--black)}
+.hero-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,255,255,0.12)}
+.hero-btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border-light)}
+.hero-btn-ghost:hover{color:var(--white);border-color:var(--border-light)}
 
 /* PRODUCTS */
-.products{padding:110px 52px;position:relative;z-index:1}
-.sec-header{text-align:center;margin-bottom:72px}
-.sec-tag{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted2);font-weight:600;margin-bottom:18px}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(34px,4.5vw,56px);font-weight:800;letter-spacing:-0.025em;line-height:1.06;margin-bottom:16px}
-.sec-sub{font-size:15px;color:var(--muted);line-height:1.75;font-weight:300;max-width:440px;margin:0 auto}
+.products{padding:120px 60px;position:relative;z-index:1}
+.sec-header{text-align:center;margin-bottom:80px}
+.sec-tag{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);font-weight:600;margin-bottom:16px}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;letter-spacing:-0.025em;line-height:1.06;margin-bottom:14px}
+.sec-sub{font-size:15px;color:var(--muted);line-height:1.8;font-weight:300;max-width:400px;margin:0 auto}
 
-.product-card{max-width:1080px;margin:0 auto 28px;border:1px solid var(--border);border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:460px;transition:border-color 0.3s}
-.product-card:hover{border-color:var(--border-light)}
+/* PRODUCT GRID — side by side */
+.product-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
-/* visuals */
-.pv{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:460px}
-.bloom-bg{background:linear-gradient(145deg,#1B5E20,#2E7D32,#1C4E1E)}
-.rc-bg{background:linear-gradient(145deg,#0D0D0D,#1A1A1A,#0A0A0A)}
-.rc-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(229,57,53,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(229,57,53,0.07) 1px,transparent 1px);background-size:38px 38px}
+.product-card{border:1px solid var(--border);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.3s,transform 0.3s}
+.product-card:hover{border-color:var(--border-light);transform:translateY(-3px)}
+
+.pv{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;height:280px}
+.bloom-bg{background:linear-gradient(145deg,#0F2E14,#1B5E20,#0F2E14)}
+.coffee-bg{background:linear-gradient(145deg,#1A0A00,#2C1A0E,#1A0A00)}
+.coffee-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,134,10,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(200,134,10,0.05) 1px,transparent 1px);background-size:36px 36px}
 .orb{position:absolute;border-radius:50%}
-.o1{width:380px;height:380px;background:radial-gradient(circle,rgba(61,220,132,0.14) 0%,transparent 70%);top:-70px;left:-70px}
-.o2{width:280px;height:280px;background:radial-gradient(circle,rgba(156,143,217,0.11) 0%,transparent 70%);bottom:-50px;right:-50px}
-.app-icon{position:relative;z-index:2;width:110px;height:110px;border-radius:26px;display:flex;align-items:center;justify-content:center;font-size:58px;box-shadow:0 28px 72px rgba(0,0,0,0.45),0 0 0 1px rgba(255,255,255,0.09)}
+.o1{width:300px;height:300px;background:radial-gradient(circle,rgba(61,220,132,0.12) 0%,transparent 70%);top:-60px;left:-60px}
+.o2{width:240px;height:240px;background:radial-gradient(circle,rgba(156,143,217,0.09) 0%,transparent 70%);bottom:-40px;right:-40px}
+.app-icon{position:relative;z-index:2;width:88px;height:88px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:46px;box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.08)}
 .bloom-icon{background:linear-gradient(135deg,#2E7D32,#66BB6A)}
-.rc-icon{background:linear-gradient(135deg,#B71C1C,#E53935);box-shadow:0 28px 72px rgba(229,57,53,0.28),0 0 0 1px rgba(255,255,255,0.07)}
+.coffee-icon{background:linear-gradient(135deg,#3D1C00,#7B3A00)}
 
-/* content */
-.pc{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;background:var(--near-black)}
-.badge{display:inline-flex;align-items:center;gap:7px;border-radius:100px;padding:5px 15px;font-size:11px;font-weight:500;letter-spacing:0.07em;margin-bottom:22px;width:fit-content}
-.b-live{background:var(--green-dim);color:var(--green);border:1px solid rgba(61,220,132,0.18)}
-.b-soon{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,166,35,0.18)}
-.b-dot{width:5px;height:5px;border-radius:50%}
-.b-live .b-dot{background:var(--green);box-shadow:0 0 5px var(--green);animation:pulse 2s ease-in-out infinite}
-.b-soon .b-dot{background:var(--amber)}
-.p-name{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;letter-spacing:-0.02em;margin-bottom:13px;line-height:1}
-.p-tag{font-size:15px;color:var(--muted);line-height:1.68;margin-bottom:32px;font-weight:300}
-.p-feats{list-style:none;margin-bottom:36px}
-.p-feats li{display:flex;align-items:center;gap:11px;font-size:14px;color:rgba(255,255,255,0.6);padding:9px 0;border-bottom:1px solid var(--border)}
+.pc{padding:36px 32px;display:flex;flex-direction:column;justify-content:flex-start;background:var(--near-black);flex:1}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:100px;padding:4px 12px;font-size:10px;font-weight:500;letter-spacing:0.08em;margin-bottom:18px;width:fit-content;text-transform:uppercase}
+.b-live{background:var(--green-dim);color:var(--green);border:1px solid rgba(61,220,132,0.15)}
+.b-soon{background:var(--coffee-dim);color:var(--coffee);border:1px solid rgba(200,134,10,0.15)}
+.b-dot{width:4px;height:4px;border-radius:50%}
+.b-live .b-dot{background:var(--green);animation:pulse 2s ease-in-out infinite}
+.b-soon .b-dot{background:var(--coffee)}
+.p-name{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;letter-spacing:-0.02em;margin-bottom:10px;line-height:1}
+.p-tag{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px;font-weight:300}
+.p-feats{list-style:none;margin-bottom:28px}
+.p-feats li{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,0.55);padding:8px 0;border-bottom:1px solid var(--border)}
 .p-feats li:last-child{border-bottom:none}
-.fd{width:4px;height:4px;border-radius:50%;flex-shrink:0}
+.fd{width:3px;height:3px;border-radius:50%;flex-shrink:0}
 .fd-g{background:var(--green)}
-.fd-a{background:var(--amber)}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:100px;font-size:14px;font-weight:500;font-family:inherit;text-decoration:none;border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;width:fit-content}
-.btn-g{background:var(--green);color:#082010}
-.btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(61,220,132,0.28)}
-.btn-a{background:transparent;color:var(--amber);border:1px solid rgba(245,166,35,0.3)}
-.btn-a:hover{background:var(--amber-dim);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);margin-left:10px}
+.fd-c{background:var(--coffee)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;font-size:13px;font-weight:500;font-family:inherit;text-decoration:none;border:none;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;width:fit-content;letter-spacing:0.01em}
+.btn-g{background:var(--green);color:#051A08}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(61,220,132,0.25)}
+.btn-c{background:transparent;color:var(--coffee);border:1px solid rgba(200,134,10,0.28)}
+.btn-c:hover{background:var(--coffee-dim);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);margin-left:8px}
 .btn-ghost:hover{color:var(--white);border-color:var(--border-light)}
 
-/* flip */
-.flip .pv{order:2}
-.flip .pc{order:1;border-right:1px solid var(--border)}
-
-/* ABOUT */
-.about{padding:110px 52px;background:var(--near-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
-.about-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:20px;overflow:hidden}
-.stat-box{background:var(--dark);padding:32px 28px;border:1px solid var(--border)}
-.s-num{font-family:'Syne',sans-serif;font-size:46px;font-weight:800;letter-spacing:-0.02em;margin-bottom:5px}
-.s-lbl{font-size:12px;color:var(--muted);font-weight:300}
-.sg{color:var(--green)} .sa{color:var(--amber)} .sw{color:var(--white)}
-.why-list{list-style:none;margin-top:36px}
-.why-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--border)}
-.why-item:last-child{border-bottom:none}
-.why-num{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--muted2);flex-shrink:0;width:26px;margin-top:2px}
-.why-text strong{display:block;font-size:15px;font-weight:500;margin-bottom:3px}
-.why-text span{font-size:13px;color:var(--muted);line-height:1.55}
+/* VALUES */
+.values{padding:120px 60px;background:var(--near-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1}
+.values-inner{max-width:1080px;margin:0 auto}
+.values-header{margin-bottom:64px}
+.values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.value-box{background:var(--dark);padding:32px 24px}
+.v-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--muted2);letter-spacing:0.12em;margin-bottom:16px}
+.v-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--white);margin-bottom:8px}
+.v-desc{font-size:12px;color:var(--muted);line-height:1.6;font-weight:300}
 
 /* CONTACT */
-.contact{padding:110px 52px;background:var(--black);position:relative;z-index:1}
-.contact-inner{max-width:600px;margin:0 auto;text-align:center}
-.cform{background:var(--near-black);border:1px solid var(--border);border-radius:22px;padding:44px;margin-top:44px;text-align:left}
-.flbl{display:block;font-size:11px;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
-.finput,.ftarea{width:100%;padding:12px 15px;background:var(--dark);border:1px solid var(--border);border-radius:10px;color:var(--white);font-size:14px;font-family:inherit;outline:none;transition:border-color 0.2s;margin-bottom:18px}
-.finput:focus,.ftarea:focus{border-color:rgba(245,166,35,0.45)}
+.contact{padding:120px 60px;background:var(--black);position:relative;z-index:1}
+.contact-inner{max-width:560px;margin:0 auto;text-align:center}
+.cform{background:var(--near-black);border:1px solid var(--border);border-radius:20px;padding:40px;margin-top:40px;text-align:left}
+.flbl{display:block;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.finput,.ftarea{width:100%;padding:11px 14px;background:var(--dark);border:1px solid var(--border);border-radius:10px;color:var(--white);font-size:14px;font-family:inherit;outline:none;transition:border-color 0.2s;margin-bottom:16px}
+.finput:focus,.ftarea:focus{border-color:rgba(245,166,35,0.35)}
 .finput::placeholder,.ftarea::placeholder{color:var(--muted2)}
-.ftarea{resize:vertical;min-height:110px}
-.fsub{width:100%;padding:14px;border-radius:100px;background:var(--amber);color:var(--black);font-size:15px;font-weight:600;font-family:inherit;border:none;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
-.fsub:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(245,166,35,0.28)}
+.ftarea{resize:vertical;min-height:100px}
+.fsub{width:100%;padding:13px;border-radius:100px;background:var(--amber);color:var(--black);font-size:14px;font-weight:600;font-family:inherit;border:none;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;letter-spacing:0.01em}
+.fsub:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(245,166,35,0.25)}
 .fsuccess{display:none;text-align:center;padding:28px}
 
 /* FOOTER */
-footer{background:var(--near-black);border-top:1px solid var(--border);padding:40px 52px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;position:relative;z-index:1}
-.fl{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;letter-spacing:0.07em}
+footer{background:var(--near-black);border-top:1px solid var(--border);padding:36px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.fl{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;letter-spacing:0.08em}
 .fl span{color:var(--amber)}
 .flinks{display:flex;gap:24px;list-style:none;flex-wrap:wrap}
-.flinks a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.flinks a{font-size:12px;color:var(--muted);text-decoration:none;transition:color 0.2s;letter-spacing:0.02em}
 .flinks a:hover{color:var(--white)}
-.fcopy{font-size:12px;color:var(--muted2)}
+.fcopy{font-size:11px;color:var(--muted2);letter-spacing:0.02em}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:860px){
   nav{padding:14px 20px}
   .nav-links{display:none}
-  .products,.about,.contact{padding:72px 20px}
+  .products,.values,.contact{padding:80px 20px}
   .hero{padding:110px 20px 72px}
-  .product-card,.product-card.flip{grid-template-columns:1fr}
-  .flip .pv{order:0}
-  .flip .pc{order:1;border-right:none;border-top:1px solid var(--border)}
-  .pv{min-height:240px}
-  .pc{padding:32px 24px}
-  .about-inner{grid-template-columns:1fr;gap:44px}
-  footer{flex-direction:column;text-align:center;padding:36px 20px}
+  .product-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;text-align:center;padding:32px 20px}
   .flinks{justify-content:center}
+}
+@media(max-width:480px){
+  .values-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -162,7 +158,7 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
   <a href="#" class="nav-logo">A<span>S</span>R</a>
   <ul class="nav-links">
     <li><a href="#products" data-en="Products" data-ar="المنتجات">Products</a></li>
-    <li><a href="#about" data-en="About" data-ar="عنّا">About</a></li>
+    <li><a href="#values" data-en="Values" data-ar="قيمنا">Values</a></li>
     <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
   </ul>
   <button class="lang-btn" onclick="toggleLang()" id="langBtn">عربي</button>
@@ -178,7 +174,11 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
   <h1 class="hero-title">
     <span data-en="We build things<br>people <span class='acc'>love.</span>" data-ar="نبني أشياء<br>يحبّها <span class='acc'>الناس.</span>">We build things<br>people <span class="acc">love.</span></span>
   </h1>
-  <p class="hero-sub" data-en="ASR is an independent studio creating apps and products that make life better — starting with Bloom." data-ar="ASR استوديو مستقل يصنع تطبيقات ومنتجات تجعل الحياة أفضل — بدءاً من بلوم.">ASR is an independent studio creating apps and products that make life better — starting with Bloom.</p>
+  <p class="hero-sub" data-en="ASR is an independent studio creating apps and products that make everyday life better." data-ar="ASR استوديو مستقل يصنع تطبيقات ومنتجات تجعل الحياة اليومية أفضل.">ASR is an independent studio creating apps and products that make everyday life better.</p>
+  <div class="hero-actions">
+    <a href="#products" class="hero-btn hero-btn-primary" data-en="See our products" data-ar="اكتشف منتجاتنا">See our products</a>
+    <a href="#contact" class="hero-btn hero-btn-ghost" data-en="Get in touch" data-ar="تواصل معنا">Get in touch</a>
+  </div>
   <p class="hero-scroll" data-en="↓ scroll" data-ar="↓ مرّر">↓ scroll</p>
 </section>
 
@@ -189,81 +189,88 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
     <p class="sec-sub" data-en="Two products, one mission — build things that genuinely help people." data-ar="منتجان، مهمة واحدة — بناء أشياء تساعد الناس فعلاً.">Two products, one mission — build things that genuinely help people.</p>
   </div>
 
-  <!-- BLOOM -->
-  <div class="product-card reveal">
-    <div class="pv bloom-bg">
-      <div class="orb o1"></div>
-      <div class="orb o2"></div>
-      <div class="app-icon bloom-icon">🌿</div>
-    </div>
-    <div class="pc">
-      <div class="badge b-live"><div class="b-dot"></div><span data-en="Live on App Store" data-ar="متاح في متجر آبل">Live on App Store</span></div>
-      <h3 class="p-name">Bloom</h3>
-      <p class="p-tag" data-en="The goal app that grows with you. No streaks, no guilt — just real progress at your own pace, powered by AI." data-ar="تطبيق الأهداف الذي ينمو معك. لا ضغط، لا ذنب — فقط تقدم حقيقي بوتيرتك، مدعوم بالذكاء الاصطناعي.">The goal app that grows with you. No streaks, no guilt — just real progress at your own pace, powered by AI.</p>
-      <ul class="p-feats">
-        <li><div class="fd fd-g"></div><span data-en="AI-powered goal plans for fitness, finance, sleep & more" data-ar="خطط أهداف بالذكاء الاصطناعي للياقة والمال والنوم وأكثر">AI-powered goal plans for fitness, finance, sleep & more</span></li>
-        <li><div class="fd fd-g"></div><span data-en="Visual growth garden that tracks your progress" data-ar="حديقة نمو بصرية تتتبع تقدمك">Visual growth garden that tracks your progress</span></li>
-        <li><div class="fd fd-g"></div><span data-en="Smart journaling, community & goal analytics" data-ar="يوميات ذكية، مجتمع، وتحليلات الأهداف">Smart journaling, community & goal analytics</span></li>
-      </ul>
-      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px">
-        <a href="https://apps.apple.com/us/app/bloom-goal-planner/id6757602403" target="_blank" class="btn btn-g">
-          <span>🍎</span><span data-en="Download on App Store" data-ar="حمّل من متجر آبل">Download on App Store</span>
-        </a>
-        <a href="https://acoustic-patella-4c1.notion.site/Bloom-Support-31d971b304418046a4f2f09ee" target="_blank" class="btn btn-ghost">
-          <span data-en="Support" data-ar="الدعم">Support</span>
-        </a>
+  <div class="product-grid">
+
+    <!-- BLOOM -->
+    <div class="product-card reveal">
+      <div class="pv bloom-bg">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+        <div class="app-icon bloom-icon">🌿</div>
+      </div>
+      <div class="pc">
+        <div class="badge b-live"><div class="b-dot"></div><span data-en="Live on App Store" data-ar="متاح في متجر آبل">Live on App Store</span></div>
+        <h3 class="p-name">Bloom</h3>
+        <p class="p-tag" data-en="The goal app that grows with you. No streaks, no guilt — just real progress at your own pace." data-ar="تطبيق الأهداف الذي ينمو معك. لا ضغط، لا ذنب — فقط تقدم حقيقي بوتيرتك.">The goal app that grows with you. No streaks, no guilt — just real progress at your own pace.</p>
+        <ul class="p-feats">
+          <li><div class="fd fd-g"></div><span data-en="AI-powered plans for fitness, finance & more" data-ar="خطط بالذكاء الاصطناعي للياقة والمال وأكثر">AI-powered plans for fitness, finance & more</span></li>
+          <li><div class="fd fd-g"></div><span data-en="Visual garden that tracks your growth" data-ar="حديقة بصرية تتتبع نموك">Visual garden that tracks your growth</span></li>
+          <li><div class="fd fd-g"></div><span data-en="Community, journaling & goal analytics" data-ar="مجتمع، يوميات، وتحليلات أهداف">Community, journaling & goal analytics</span></li>
+        </ul>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px">
+          <a href="https://apps.apple.com/us/app/bloom-goal-planner/id6757602403" target="_blank" class="btn btn-g">
+            <span>🍎</span><span data-en="Download on App Store" data-ar="حمّل من متجر آبل">Download on App Store</span>
+          </a>
+          <a href="/support.html" class="btn btn-ghost" data-en="Support" data-ar="الدعم">Support</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ASR RC -->
-  <div class="product-card flip reveal">
-    <div class="pv rc-bg">
-      <div class="rc-grid"></div>
-      <div class="app-icon rc-icon">🏎️</div>
+    <!-- ASR COFFEE -->
+    <div class="product-card reveal">
+      <div class="pv coffee-bg">
+        <div class="coffee-grid"></div>
+        <div class="app-icon coffee-icon">☕</div>
+      </div>
+      <div class="pc">
+        <div class="badge b-soon"><div class="b-dot"></div><span data-en="Coming Soon" data-ar="قريباً">Coming Soon</span></div>
+        <h3 class="p-name">ASR Coffee</h3>
+        <p class="p-tag" data-en="Premium Kuwaiti coffee, brewed with intention. From specialty blends to our signature matte black tumbler — made for people who take their craft seriously." data-ar="قهوة كويتية فاخرة، تُصنع بنية. من الخلطات المميزة إلى كوبنا الأسود المطفي — صُنع لمن يأخذون حرفتهم بجدية.">Premium Kuwaiti coffee, brewed with intention. From specialty blends to our signature matte black tumbler — made for people who take their craft seriously.</p>
+        <ul class="p-feats">
+          <li><div class="fd fd-c"></div><span data-en="Signature matte black tumbler — laser engraved" data-ar="كوب أسود مطفي مميز — محفور بالليزر">Signature matte black tumbler — laser engraved</span></li>
+          <li><div class="fd fd-c"></div><span data-en="Premium specialty coffee blends" data-ar="خلطات قهوة متخصصة فاخرة">Premium specialty coffee blends</span></li>
+          <li><div class="fd fd-c"></div><span data-en="Kuwait delivery — join the waitlist" data-ar="توصيل الكويت — انضم لقائمة الانتظار">Kuwait delivery — join the waitlist</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-c" data-en="Join the waitlist →" data-ar="انضم لقائمة الانتظار ←">Join the waitlist →</a>
+      </div>
     </div>
-    <div class="pc">
-      <div class="badge b-soon"><div class="b-dot"></div><span data-en="Coming Soon" data-ar="قريباً">Coming Soon</span></div>
-      <h3 class="p-name">ASR RC</h3>
-      <p class="p-tag" data-en="High-performance RC cars built for enthusiasts. Precision engineering, premium quality — the ultimate RC experience." data-ar="سيارات RC عالية الأداء مصممة للمحبين. هندسة دقيقة وجودة عالية — تجربة RC لا مثيل لها.">High-performance RC cars built for enthusiasts. Precision engineering, premium quality — the ultimate RC experience.</p>
-      <ul class="p-feats">
-        <li><div class="fd fd-a"></div><span data-en="Professional-grade performance at every level" data-ar="أداء احترافي في كل مستوى">Professional-grade performance at every level</span></li>
-        <li><div class="fd fd-a"></div><span data-en="Premium components, built to last" data-ar="مكونات فاخرة، مصممة لتدوم">Premium components, built to last</span></li>
-        <li><div class="fd fd-a"></div><span data-en="Join the waitlist for early access & launch pricing" data-ar="انضم لقائمة الانتظار للوصول المبكر وأسعار الإطلاق">Join the waitlist for early access & launch pricing</span></li>
-      </ul>
-      <a href="#contact" class="btn btn-a" data-en="Join the waitlist →" data-ar="انضم لقائمة الانتظار ←">Join the waitlist →</a>
-    </div>
+
   </div>
 </section>
 
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="reveal">
-      <div class="stat-grid">
-        <div class="stat-box"><div class="s-num sg">1</div><div class="s-lbl" data-en="App live on App Store" data-ar="تطبيق في متجر آبل">App live on App Store</div></div>
-        <div class="stat-box"><div class="s-num sa">2</div><div class="s-lbl" data-en="Products in the pipeline" data-ar="منتجات في الطريق">Products in the pipeline</div></div>
-        <div class="stat-box"><div class="s-num sw">KW</div><div class="s-lbl" data-en="Built in Kuwait" data-ar="صُنع في الكويت">Built in Kuwait</div></div>
-        <div class="stat-box"><div class="s-num sa">∞</div><div class="s-lbl" data-en="Ideas in progress" data-ar="أفكار قيد التطوير">Ideas in progress</div></div>
-      </div>
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="values-inner">
+    <div class="values-header reveal">
+      <p class="sec-tag" data-en="What we stand for" data-ar="ما نؤمن به">What we stand for</p>
+      <h2 class="sec-title" data-en="Our core values" data-ar="قيمنا الأساسية">Our core values</h2>
     </div>
-    <div class="reveal">
-      <p class="sec-tag" data-en="About ASR" data-ar="عن ASR">About ASR</p>
-      <h2 class="sec-title" data-en="Small studio,<br>big ideas." data-ar="استوديو صغير،<br>أفكار كبيرة.">Small studio,<br>big ideas.</h2>
-      <p style="font-size:15px;color:var(--muted);line-height:1.75;font-weight:300" data-en="ASR is an independent product studio based in Kuwait. We build software and hardware products that solve real problems for real people." data-ar="ASR استوديو منتجات مستقل في الكويت. نبني منتجات برمجية وتقنية تحل مشاكل حقيقية لأناس حقيقيين.">ASR is an independent product studio based in Kuwait. We build software and hardware products that solve real problems for real people.</p>
-      <ul class="why-list">
-        <li class="why-item">
-          <div class="why-num">01</div>
-          <div class="why-text"><strong data-en="Quality over quantity" data-ar="الجودة فوق الكمية">Quality over quantity</strong><span data-en="We ship when it's ready — not before. Every detail matters." data-ar="نطلق حين يكون جاهزاً — لا قبل ذلك. كل تفصيل مهم.">We ship when it's ready — not before. Every detail matters.</span></div>
-        </li>
-        <li class="why-item">
-          <div class="why-num">02</div>
-          <div class="why-text"><strong data-en="People first" data-ar="الناس أولاً">People first</strong><span data-en="We build what people actually need, not what's trendy." data-ar="نبني ما يحتاجه الناس فعلاً، لا ما هو رائج.">We build what people actually need, not what's trendy.</span></div>
-        </li>
-        <li class="why-item">
-          <div class="why-num">03</div>
-          <div class="why-text"><strong data-en="Kuwait to the world" data-ar="من الكويت للعالم">Kuwait to the world</strong><span data-en="Proud to build world-class products from Kuwait. Local roots, global ambition." data-ar="نفخر ببناء منتجات عالمية من الكويت. جذور محلية وطموح عالمي.">Proud to build world-class products from Kuwait. Local roots, global ambition.</span></div>
-        </li>
-      </ul>
+    <div class="values-grid reveal">
+      <div class="value-box">
+        <div class="v-num">01</div>
+        <div class="v-name" data-en="Responsibility" data-ar="المسؤولية">Responsibility</div>
+        <div class="v-desc" data-en="Taking ownership of every decision, action, and outcome." data-ar="تحمّل مسؤولية كل قرار وفعل ونتيجة.">Taking ownership of every decision, action, and outcome.</div>
+      </div>
+      <div class="value-box">
+        <div class="v-num">02</div>
+        <div class="v-name" data-en="Passion" data-ar="الشغف">Passion</div>
+        <div class="v-desc" data-en="Bringing genuine energy and dedication to everything we do." data-ar="إحضار طاقة حقيقية وتفانٍ لكل ما نفعله.">Bringing genuine energy and dedication to everything we do.</div>
+      </div>
+      <div class="value-box">
+        <div class="v-num">03</div>
+        <div class="v-name" data-en="Integrity" data-ar="النزاهة">Integrity</div>
+        <div class="v-desc" data-en="Doing the right thing always — open and honest where it matters." data-ar="فعل الصواب دائماً — بشفافية وصدق حيث يهم.">Doing the right thing always — open and honest where it matters.</div>
+      </div>
+      <div class="value-box">
+        <div class="v-num">04</div>
+        <div class="v-name" data-en="Ambition" data-ar="الطموح">Ambition</div>
+        <div class="v-desc" data-en="Always pushing further, thinking bigger, and refusing to settle." data-ar="دائماً نمضي إلى الأمام ونفكر بشكل أكبر ونرفض الاستسلام.">Always pushing further, thinking bigger, and refusing to settle.</div>
+      </div>
+      <div class="value-box">
+        <div class="v-num">05</div>
+        <div class="v-name" data-en="Creativity" data-ar="الإبداع">Creativity</div>
+        <div class="v-desc" data-en="Finding fresh, smart solutions and never following the crowd." data-ar="إيجاد حلول جديدة وذكية وعدم اتباع القطيع أبداً.">Finding fresh, smart solutions and never following the crowd.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -273,7 +280,7 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
     <div class="reveal">
       <p class="sec-tag" data-en="Get in touch" data-ar="تواصل معنا">Get in touch</p>
       <h2 class="sec-title" data-en="Let's talk." data-ar="لنتحدث.">Let's talk.</h2>
-      <p style="font-size:15px;color:var(--muted);line-height:1.75;font-weight:300" data-en="Questions, partnerships, or joining the ASR RC waitlist — we'd love to hear from you." data-ar="أسئلة، شراكات، أو الانضمام لقائمة انتظار ASR RC — يسعدنا سماعك.">Questions, partnerships, or joining the ASR RC waitlist — we'd love to hear from you.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;font-weight:300;margin-top:12px" data-en="Questions, partnerships, or joining the ASR Coffee waitlist — we'd love to hear from you." data-ar="أسئلة، شراكات، أو الانضمام لقائمة انتظار ASR Coffee — يسعدنا سماعك.">Questions, partnerships, or joining the ASR Coffee waitlist — we'd love to hear from you.</p>
     </div>
     <div class="cform reveal">
       <div id="cFormInner">
@@ -286,9 +293,9 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
         <button class="fsub" onclick="sendMsg()" data-en="Send message →" data-ar="أرسل رسالتك →">Send message →</button>
       </div>
       <div class="fsuccess" id="fDone">
-        <p style="font-size:44px;margin-bottom:14px">✦</p>
-        <p style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--amber)" data-en="Message received." data-ar="تم استلام رسالتك.">Message received.</p>
-        <p style="color:var(--muted);margin-top:7px;font-size:14px" data-en="We'll reply to you soon from hamany678@asrkw.com" data-ar="سنرد عليك قريباً من hamany678@asrkw.com">We'll reply to you soon from hamany678@asrkw.com</p>
+        <p style="font-size:40px;margin-bottom:12px">✦</p>
+        <p style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--amber)" data-en="Message received." data-ar="تم استلام رسالتك.">Message received.</p>
+        <p style="color:var(--muted);margin-top:6px;font-size:13px" data-en="We'll reply soon from hamany678@asrkw.com" data-ar="سنرد قريباً من hamany678@asrkw.com">We'll reply soon from hamany678@asrkw.com</p>
       </div>
     </div>
   </div>
@@ -298,10 +305,10 @@ footer{background:var(--near-black);border-top:1px solid var(--border);padding:4
   <div class="fl">A<span>S</span>R</div>
   <ul class="flinks">
     <li><a href="#products" data-en="Products" data-ar="المنتجات">Products</a></li>
-    <li><a href="#about" data-en="About" data-ar="عنّا">About</a></li>
+    <li><a href="#values" data-en="Values" data-ar="قيمنا">Values</a></li>
     <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
-    <li><a href="https://apps.apple.com/us/app/bloom-goal-planner/id6757602403" target="_blank" data-en="Bloom on App Store" data-ar="بلوم في متجر آبل">Bloom on App Store</a></li>
-    <li><a href="https://acoustic-patella-4c1.notion.site/Bloom-Support-31d971b304418046a4f2f09ee" target="_blank" data-en="Bloom Support" data-ar="دعم بلوم">Bloom Support</a></li>
+    <li><a href="https://apps.apple.com/us/app/bloom-goal-planner/id6757602403" target="_blank" data-en="Bloom" data-ar="بلوم">Bloom</a></li>
+    <li><a href="/support.html" data-en="Support" data-ar="الدعم">Support</a></li>
   </ul>
   <p class="fcopy" data-en="© 2026 ASR. All rights reserved." data-ar="© 2026 ASR. جميع الحقوق محفوظة.">© 2026 ASR. All rights reserved.</p>
 </footer>
