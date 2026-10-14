@@ -59,6 +59,23 @@
         <div class="contact-line"><span class="k">App Store</span><a href="https://apps.apple.com/app/id6757602403" target="_blank" rel="noopener">Bloom on the App Store</a></div>
       </aside>
 
+      <form id="contactForm" class="reveal" novalidate>
+        <div class="row">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" maxlength="100" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" maxlength="150" placeholder="Partnership, press, Bloom support…"></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" minlength="5" maxlength="3000" required></textarea></div>
+        <!-- Honeypot: hidden from people, filled by bots. -->
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <button type="submit" class="btn btn-dark">Send message</button>
+        <p class="form-note">We reply by email, usually within two working days.</p>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer>
   <div class="wrap">
@@ -73,6 +90,8 @@
         <a href="/products">Products</a>
         <a href="/about#team">Team</a>
         <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
       </div>
       <div class="foot-col">
         <h5>Products &amp; contact</h5>
@@ -90,5 +109,6 @@
 </footer>
 
 <script src="/assets/js/site.js" defer></script>
+<script type="module" src="/assets/js/contact.js"></script>
 </body>
 </html>
