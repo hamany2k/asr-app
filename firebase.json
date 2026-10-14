@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "site": "asrkw",
+    "public": ".",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      ".git",
+      ".git/**",
+      ".claude/**",
+      ".firebase/**",
+      "**/.*",
+      "**/.*/**",
+      "**/node_modules/**",
+      "README.md",
+      "DEPLOY.md"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=300"
+          }
+        ]
+      }
+    ]
+  }
+}
